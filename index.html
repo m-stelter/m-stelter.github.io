@@ -121,6 +121,10 @@ footer {
     display: none;
     margin-top: 10px;
 }
+
+.accordion-title:hover {
+    color: #0073e6;
+}
           
 </style>
 
@@ -133,6 +137,27 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!abstract) return;
       abstract.style.display =
         abstract.style.display === "block" ? "none" : "block";
+    });
+  });
+});
+
+   document.addEventListener("DOMContentLoaded", function () {
+  const titles = document.querySelectorAll(".accordion-title");
+
+  titles.forEach(title => {
+    title.addEventListener("click", function () {
+      const currentContent = this.nextElementSibling;
+
+      // Close all sections
+      document.querySelectorAll(".accordion-content").forEach(content => {
+        if (content !== currentContent) {
+          content.style.display = "none";
+        }
+      });
+
+      // Toggle current section
+      currentContent.style.display =
+        currentContent.style.display === "block" ? "none" : "block";
     });
   });
 });
