@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Matthias Stelter</title>
-    <meta charset="UTF-8">
-    <style>
-        body {
+   
+   
+  
+     <title>Matthias Stelter</title>
+    
+     <meta http-equiv="content-type" content="text/html; charset=utf-8">    
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="keywords" content="Matthias Stelter,  public health, nutrition, food systems, University of Bayreuth, Universität Bayreuth, Mannheim, C4ED, informed consent">
+    <meta name="description" content="Academic home page of Matthias Stelter">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CJosefin+Sans" rel="stylesheet">
+
+      <style type="text/css">  
+    
+    
+          body {
             font-family: Georgia, serif;
             max-width: 760px;
             margin: 60px auto;
@@ -14,7 +27,7 @@
         }
 
         h1 {
-            font-weight: normal;
+            font-weight: bold;
             margin-bottom: 5px;
         }
 
@@ -59,7 +72,7 @@
         }
 
         .paper-title {
-            font-style: italic;
+            font-style: bold;
         }
 
         .links a {
@@ -71,8 +84,26 @@
             font-size: 14px;
             color: #666;
         }
+          .abstract {
+  display: none;
+  margin-top: 10px;
+}
 
     </style>
+<button class="button">Abstract</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".button").forEach(button => {
+    button.addEventListener("click", function () {
+      const paper = this.closest(".paper");
+      const abstract = paper.querySelector(".abstract");
+      abstract.style.display =
+        abstract.style.display === "block" ? "none" : "block";
+    });
+  });
+});
+</script>
+    
 </head>
 <body>
 
@@ -104,7 +135,7 @@
 </div>
 
 <nav>
-    <a href="#about">About</a>
+  <!--  <a href="#about">About</a> -->
     <a href="#research">Research</a>
     <a href="#policy">Policy and evaluation</a>
     <a href="#cv">CV</a>
@@ -114,11 +145,11 @@
 
 
 <section id="about">
-<h2>About</h2>
 <p>
 I am an economist and a postdoctoral researcher at the Chair of Public Health Nutrition at the University of Bayreuth, with a background in development economics and applied econometrics. 
   My research focuses on policy measures to promote healthy, sustainable, and ethical food systems, as well as the (public) health implications of plant-based diets. 
-  I have a strong interest in the interfaces between science, practice, and policy, as well as in evidence-based policymaking.
+  I have a strong interest in the interfaces between science, practice, and policy, as well as in evidence-based policymaking. <br>
+    
 I received my PhD in Economics from the Universtiy of Mannheim.
 </p>
 </section>
@@ -164,7 +195,19 @@ I received my PhD in Economics from the Universtiy of Mannheim.
     <div class="paper-title">How informed is consent - A field experiment in Pakistan</div>
     with <em>Alexandra Avdeenko</em><br>
     Revise and resubmit at Economic Development and Cultural Change <br>
-   <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4026916" target="_blank">Old version (2022)</a>, updated version (2026) available upon request
+   <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4026916" target="_blank">[Old version, 2022]</a>, updated version (2026) available upon request, [<button class="button" onclick="toggleAbstract(this)">Abstract</button>]
+
+    <div class="abstract">
+        <p class="ex2">The extent to which consent to survey participation is genuinely informed is largely unknown. 
+            We conducted a large-scale survey with 7,752 participants in rural Pakistan and find that respondents are insufficiently informed about key aspects related to their consent. 
+            For instance, only about one in five people correctly understand the purpose of the data collection. 
+            Experimentally testing approaches to improve understanding, we find that contrary to expectations, showing an animated video reduced respondents' understanding, suggesting that such interventions may unintentionally backfire. 
+            In contrast, engaging respondents in an interactive dialogue improved their comprehension. 
+            Despite positive effects on understanding that participation is voluntary (24\% and 32\%), we do not observe notable effects in consent rates or non-response behavior. 
+            These results indicate that widespread deficiencies in informed consent persist and that some interventions to improve understanding may be counterproductive. 
+            Our study contributes to the ongoing debate on the ethical and practical aspects of informed consent in real-world surveys and field experiments.</p>
+    </div>
+</div>
 </div>
 
 </section>
@@ -178,16 +221,16 @@ I received my PhD in Economics from the Universtiy of Mannheim.
 
 <div class="paper">
     <div class="paper-title">SECO's Performance and quality report 2023-2024</div>
-    with <em>Johannes Schneider, Nicola Malacarn, Lennart Raetzell, Lena Häberlein, and Julia Forke</em>e<br>
-    2025<br>
-    <a href="https://www.seco-cooperation.admin.ch/dam/de/sd-web/YuwU25bzW6u8/Performance%20%26%20Quality%20Report%202023%20-%202024.pdf" target="_blank">PDF</a>
+    with <em>Johannes Schneider, Nicola Malacarn, Lennart Raetzell, Lena Häberlein, and Julia Forke</em><br>
+    2025, 
+    <a href="https://www.seco-cooperation.admin.ch/dam/de/sd-web/YuwU25bzW6u8/Performance%20%26%20Quality%20Report%202023%20-%202024.pdf" target="_blank">[PDF]</a>
 </div> 
 
   <div class="paper">
     <div class="paper-title">The Effects of Cash Transfers and Cash Plus Programs on Sexual and Reproductive Health in Sub-Saharan Africa: Rapid Evidence Review</div>
-    with <em>Viviana Urueña, Denise Hörner, Atika Pasha, Christiaan de Swardt, Apollinaire Nikiema, Zharas Aitmambet and Kathrin Wolf</em>e<br>
-    2023<br>
-    <a href="https://www.deval.org/fileadmin/Redaktion/PDF/05-Publikationen/Externe_Publikationen/2024_RIE/Uruena_et_al.__2023__Rapid_evidence_review_Cash_transfers_and_SRH.pdf" target="_blank">PDF</a>
+    with <em>Viviana Urueña, Denise Hörner, Atika Pasha, Christiaan de Swardt, Apollinaire Nikiema, Zharas Aitmambet and Kathrin Wolf</em><br>
+    2023, 
+    <a href="https://www.deval.org/fileadmin/Redaktion/PDF/05-Publikationen/Externe_Publikationen/2024_RIE/Uruena_et_al.__2023__Rapid_evidence_review_Cash_transfers_and_SRH.pdf" target="_blank">[PDF]</a>
 </div> 
 
 </section>
@@ -204,7 +247,8 @@ I received my PhD in Economics from the Universtiy of Mannheim.
 <h4>TBD</h4>
 
 <p>
-Email: matthias.stelter@uni-bayreuth.de
+
+    
 </p>
   
 </section> -->
@@ -212,13 +256,24 @@ Email: matthias.stelter@uni-bayreuth.de
 <section id="contact">
 <h2>Contact</h2>
 <p>
-Email: matthias.stelter@uni-bayreuth.de
+Email: matthias.stelter[at]uni-bayreuth.de
 </p>
 </section>
 
 
 <footer>
-Last updated: February 2026
+Last updated: February 2026 <br>
+     [<button class="button" onclick="toggleAbstract(this)">Disclaimer</button>]
+
+    <div class="abstract">
+        <p class="ex2">
+            Links: Matthias Stelter disassociates himself from the content of any of the linked websites.<br>
+
+            Data collection and privacy: Matthias Stelter does not collect any user data. This website is, however, powered by Github. 
+            <a href="https://github.com/">Github</a> may collect, store, analyze, use and sell visitor data and track visitors using own or third party tools. 
+            I refer the user to the <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service">Github terms of service</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Github privacy statement</a> for details. 
+        </p>
+    </div>
 </footer>
 
 </body>
