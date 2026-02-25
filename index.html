@@ -11,92 +11,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta name="keywords" content="Matthias Stelter,  public health, nutrition, food systems, University of Bayreuth, Universität Bayreuth, Mannheim, C4ED, informed consent">
     <meta name="description" content="Academic home page of Matthias Stelter">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CJosefin+Sans" rel="stylesheet">
+   <link rel="stylesheet" href="style.css?v=2">
 
-      <style type="text/css">  
-    
-    
-          body {
-            font-family: Georgia, serif;
-            max-width: 760px;
-            margin: 60px auto;
-            line-height: 1.7;
-            padding: 0 20px;
-            color: #222;
-        }
-
-        h1 {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        nav {
-            margin: 20px 0 40px 0;
-        }
-
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: #000;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        h2 {
-            font-weight: normal;
-            margin-top: 50px;
-        }
-
-        .top-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 180px;
-            background-color: #eaeaea;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .paper {
-            margin-bottom: 25px;
-        }
-
-        .paper-title {
-            font-style: bold;
-        }
-
-        .links a {
-            margin-right: 15px;
-        }
-
-        footer {
-            margin-top: 60px;
-            font-size: 14px;
-            color: #666;
-        }
-          .abstract {
-  display: none;
-  margin-top: 10px;
+       <style type="text/css">
+/* --- Fonts --- */
+body {
+    font-family: 'Open Sans', Georgia, serif;
+    max-width: 760px;
+    margin: 60px auto;
+    line-height: 1.7;
+    padding: 0 20px;
+    color: #222;
 }
 
-    </style>
+/* --- Headings --- */
+h1, h2, h3, h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #111;
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }  /* slightly smaller than h1 */
+h3 { font-size: 1.5em; }  /* slightly smaller than h2 */
+h4 { font-size: 1.2em; }  /* slightly smaller than h3 */
+
+/* --- Navigation --- */
+nav {
+    margin: 20px 0 40px 0;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- Top section --- */
+.top-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 180px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- Papers --- */
+.paper {
+    margin-bottom: 25px;
+}
+
+.paper-title {
+    font-weight: bold;
+}
+
+.links a {
+    margin-right: 15px;
+}
+
+/* --- Abstracts --- */
+.abstract {
+    display: none;
+    margin-top: 10px;
+    color: #555;         /* dark gray */
+    padding-left: 20px;  /* indentation */
+    font-style: italic;   /* optional, makes abstracts stand out */
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 60px;
+    font-size: 14px;
+    color: #666;
+}
+
+.button {
+    background: none;       /* remove button background */
+    border: none;           /* remove border */
+    padding: 0;             /* remove padding */
+    margin: 0;              /* remove margin */
+    color: #000;            /* text color */
+    font: inherit;          /* inherit font-family and size */
+    cursor: pointer;        /* show pointer on hover */
+    text-decoration: underline; /* optional: underline like a link */
+}
+
+.button:hover {
+    color: #0073e6;         /* optional: change color on hover */
+}
+</style>
+
 <button class="button">Abstract</button>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".button").forEach(button => {
     button.addEventListener("click", function () {
-      const paper = this.closest(".paper");
-      const abstract = paper.querySelector(".abstract");
+      // Look for the next .abstract sibling instead of .paper
+      const abstract = this.parentElement.querySelector(".abstract");
+      if (!abstract) return;
       abstract.style.display =
         abstract.style.display === "block" ? "none" : "block";
     });
@@ -146,10 +173,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <section id="about">
 <p>
+    Welcome!<br>
+    <br>
 I am an economist and a postdoctoral researcher at the Chair of Public Health Nutrition at the University of Bayreuth, with a background in development economics and applied econometrics. 
   My research focuses on policy measures to promote healthy, sustainable, and ethical food systems, as well as the (public) health implications of plant-based diets. 
   I have a strong interest in the interfaces between science, practice, and policy, as well as in evidence-based policymaking. <br>
-    
+     <br>
 I received my PhD in Economics from the Universtiy of Mannheim.
 </p>
 </section>
@@ -194,8 +223,7 @@ I received my PhD in Economics from the Universtiy of Mannheim.
 <div class="paper">
     <div class="paper-title">How informed is consent - A field experiment in Pakistan</div>
     with <em>Alexandra Avdeenko</em><br>
-    Revise and resubmit at Economic Development and Cultural Change <br>
-   <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4026916" target="_blank">[Old version, 2022]</a>, updated version (2026) available upon request, [<button class="button" onclick="toggleAbstract(this)">Abstract</button>]
+    Revise and resubmit at Economic Development and Cultural Change,  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4026916" target="_blank">[Old version, 2022]</a>, revised version (2026) available upon request, [<button class="button" onclick="toggleAbstract(this)">Abstract</button>]
 
     <div class="abstract">
         <p class="ex2">The extent to which consent to survey participation is genuinely informed is largely unknown. 
